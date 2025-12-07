@@ -22,4 +22,10 @@ npm install
 npm run dev
 ```
 
-### 5. Click on the localhost link to go to the webpage
+### 5. Run the server
+```base
+cd server
+npm run dev
+```
+
+### 6. Click on the localhost link to go to the webpage
