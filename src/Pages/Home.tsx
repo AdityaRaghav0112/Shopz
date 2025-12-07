@@ -2,8 +2,11 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>
-        <img className='w-full h-208 object-fit' src="/home.png" alt="" />
+    <div className='flex justify-between'>
+      <div className="text-center ml-70 mt-60">
+        <h1 className='text-[6vw] font-bold absolute'>Shop Now</h1>
+      </div>
+        <img className='h-[53rem]' src="/home2.png" alt="" />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import MyList from './Pages/MyList';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
+import Footer from './components/Footer';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -26,6 +27,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
       </Routes>
+      <Footer/>
     </Router>
   )
 }
