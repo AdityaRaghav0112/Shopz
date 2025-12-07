@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import p1 from "../assets/products/iphone-16.jpg";
+import p2 from "../assets/products/galaxyS23.jpeg";
+import p3 from "../assets/products/nike.png";
+import p4 from "../assets/products/adidas.jpg";
 import { getList, addToList } from "../utils/localList";
 
 const Shop = () => {
@@ -18,7 +21,7 @@ const Shop = () => {
       category: "Electronics",
       price: 900,
       brand: "Samsung",
-      image: "/products/galaxy.jpg",
+      image: p2,
     },
     {
       id: 3,
@@ -26,7 +29,7 @@ const Shop = () => {
       category: "Clothing",
       price: 150,
       brand: "Nike",
-      image: "/products/nike.jpg",
+      image: p3,
     },
     {
       id: 4,
@@ -34,7 +37,7 @@ const Shop = () => {
       category: "Clothing",
       price: 180,
       brand: "Adidas",
-      image: "/products/adidas.jpg",
+      image: p4,
     },
   ];
 
@@ -143,7 +146,7 @@ const Shop = () => {
               return (
                 <div
                   key={product.id}
-                  className="card h-96 w-80 bg-white rounded-xl shadow-md p-4"
+                  className="card h-auto w-80 bg-white rounded-xl shadow-md p-4 hover:scale-105 duration-300"
                 >
                   <img
                     src={product.image}
@@ -162,12 +165,13 @@ const Shop = () => {
                     }}
                     className={`my-3 w-full p-2 rounded-xl font-semibold transition ${
                       isAdded
-                        ? "bg-green-600 text-white cursor-not-allowed"
+                        ? "bg-blue-200 text-white cursor-not-allowed"
                         : "bg-blue-400 text-white hover:border hover:border-blue-400 hover:bg-white hover:text-blue-400"
                     }`}
                   >
                     {isAdded ? "Added ✓" : "Add to Shopping List"}
                   </button>
+                  <button className="w-full bg-gray-300 p-2 font-semibold rounded-xl hover:bg-gray-400 duration-100">Buy Now</button>
                 </div>
               );
             })}
