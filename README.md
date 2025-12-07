@@ -17,14 +17,14 @@ git clone [https://github.com/your-username/shopz.git](https://github.com/Aditya
 npm install
 ```
 
-### 4. Run the application
+### 4. Run the server
 ```base
+cs server
 npm run dev
 ```
 
-### 5. Run the server
+### 5. Open a new terminal window and run the frontend
 ```base
-cd server
 npm run dev
 ```
 
