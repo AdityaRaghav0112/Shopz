@@ -36,8 +36,8 @@ const Header: React.FC<SearchBarProps> = ({ onSearch }) => {
 
   return (
     <div className="flex items-center justify-around p-4 shadow-md bg-white">
-      <div className="logo mr-36">
-        <h1>LOGO</h1>
+      <div className="logo mr-36 font-bold text-2xl">
+        <h1>Shopz</h1>
       </div>
 
       <div>
@@ -68,7 +68,7 @@ const Header: React.FC<SearchBarProps> = ({ onSearch }) => {
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator/>
             <DropdownMenuItem variant="default">Profile</DropdownMenuItem>
-            <DropdownMenuItem>Billing</DropdownMenuItem>
+            <DropdownMenuItem><Link to='/mylist' className="cursor-default">Shopping list</Link></DropdownMenuItem>
             <DropdownMenuItem>Team</DropdownMenuItem>
             <DropdownMenuItem variant="destructive">Log Out</DropdownMenuItem>
           </DropdownMenuContent>
