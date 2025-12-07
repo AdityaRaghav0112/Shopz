@@ -42,42 +42,47 @@ export default function SignupFormDemo({ type, onSubmit }: AuthFormProps) {
   };
 
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
-      <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
-        {isSignup ? "Create an Account" : "Welcome Back"}
-      </h2>
-      <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
-        {isSignup
-          ? "Sign up to Shopz and start your journey!"
-          : "Login to continue shopping."}
-      </p>
+    <div className="flex min-h-screen items-center justify-center px-4">
+      <div className="shadow-input w-full max-w-md rounded-none bg-white px-4 py-6 md:rounded-2xl md:px-8 md:py-8 dark:bg-black">
+        <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+          {isSignup ? "Create an Account" : "Welcome Back"}
+        </h2>
+        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
+          {isSignup
+            ? "Sign up to Shopz and start your journey!"
+            : "Login to continue shopping."}
+        </p>
 
-      <form className="my-8" onSubmit={handleSubmit}>
-        {/* SIGNUP ONLY — FIRST & LAST NAME */}
-        {isSignup && (
-          <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-            <LabelInputContainer>
-              <Label htmlFor="firstname">First name</Label>
-              <Input
-                id="firstname"
-                placeholder="Tyler"
-                type="text"
-                value={formData.firstname}
-                onChange={handleChange}
-              />
-            </LabelInputContainer>
-            <LabelInputContainer>
-              <Label htmlFor="lastname">Last name</Label>
-              <Input
-                id="lastname"
-                placeholder="Durden"
-                type="text"
-                value={formData.lastname}
-                onChange={handleChange}
-              />
-            </LabelInputContainer>
-          </div>
-        )}
+        <form className="my-8" onSubmit={handleSubmit}>
+          {/* SIGNUP ONLY — FIRST & LAST NAME */}
+          {isSignup && (
+            <div className="mb-4 flex w-full flex-col gap-2 md:flex-row md:gap-2">
+              <div className="input flex">
+                <LabelInputContainer className="w-full md:w-1/2">
+                <Label htmlFor="firstname">First name</Label>
+                <Input
+                  id="firstname"
+                  placeholder="Tyler"
+                  type="text"
+                  value={formData.firstname}
+                  onChange={handleChange}
+                  className="w-[25rem]"
+                />
+              </LabelInputContainer>
+              <LabelInputContainer className="w-full md:w-1/2">
+                <Label htmlFor="lastname">Last name</Label>
+                <Input
+                  id="lastname"
+                  placeholder="Durden"
+                  type="text"
+                  value={formData.lastname}
+                  onChange={handleChange}
+                  className="w-[25rem]"
+                />
+              </LabelInputContainer>
+              </div>
+            </div>
+          )}
 
         {/* EMAIL */}
         <LabelInputContainer className="mb-4">
@@ -122,7 +127,8 @@ export default function SignupFormDemo({ type, onSubmit }: AuthFormProps) {
         </button>
 
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
-      </form>
+        </form>
+      </div>
     </div>
   );
 }
