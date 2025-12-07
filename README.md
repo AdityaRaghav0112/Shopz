@@ -8,5 +8,18 @@ Shopz is a simple full-stack shopping list application made using **React (TypeS
 
 ### 1. Clone the project
 ```bash
-git clone https://github.com/your-username/shopz.git
-cd shopz
+git clone [https://github.com/your-username/shopz.git](https://github.com/AdityaRaghav0112/Shopz.git)
+```
+### 2. Open Shopz folder in your IDE.
+
+### 3. Install the dependencies.
+```base
+npm install
+```
+
+### 4. Run the application
+```base
+npm run dev
+```
+
+### 5. Click on the localhost link to go to the webpage
