@@ -61,7 +61,7 @@ const Shop = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-4 p-3">
+    <div className="grid grid-cols-4 gap-4 p-3 mb-10">
       {/* SIDEBAR */}
       <div className="col-span-1 w-full">
         <div className="sidebar bg-white shadow-md rounded-lg p-4 space-y-6 border">

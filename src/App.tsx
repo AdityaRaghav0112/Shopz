@@ -26,6 +26,9 @@ function App() {
         <Route path='/shop' element={<Shop/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/contact' element={<div className='h-212 mt-20 text-center font-semibold text-[2vw]'> this page is yet to come</div>}/>
+        <Route path='/about' element={<div className='h-212 mt-20 text-center font-semibold text-[2vw]'> this page is yet to come</div>}/>
+        <Route path='/TanC' element={<div className='h-212 mt-20 text-center font-semibold text-[2vw]'> this page is yet to come</div>}/>
       </Routes>
       <Footer/>
     </Router>

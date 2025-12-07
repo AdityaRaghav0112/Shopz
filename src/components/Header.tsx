@@ -120,8 +120,6 @@ const Header: React.FC<SearchBarProps> = ({ onSearch }) => {
                 </Link>
               </DropdownMenuItem>
 
-              <DropdownMenuItem>Team</DropdownMenuItem>
-
               <DropdownMenuItem
                 variant="destructive"
                 onClick={handleLogout}

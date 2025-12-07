@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getList, removeFromList } from "../utils/localList";
+import {Input} from "../components/ui/input";
 
 const MyList = () => {
   const [list, setList] = useState<any[]>([]);
@@ -14,14 +15,16 @@ const MyList = () => {
   };
 
   return (
-    <div className="p-6 ">
-      <h1 className="text-2xl font-semibold mb-4">My Shopping List</h1>
-
+    <div className="mb-10 ">
+      <h1 className="text-2xl font-semibold mb-4 p-6">My Shopping List</h1>
+      <div className="input w-screen flex justify-center p-4">
+        <Input className=""/>
+      </div>
       {list.length === 0 && (
-        <p className="text-gray-500">No items added yet.</p>
+        <p className="text-gray-500 h-212 text-center p-5">No items added yet.</p>
       )}
 
-      <div className="flex flex-wrap gap-6 ">
+      <div className="flex flex-wrap gap-6 mx-20">
         {list.map((product) => (
           <div
             key={product.id}
