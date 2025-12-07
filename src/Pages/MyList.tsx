@@ -23,8 +23,14 @@ const MyList = () => {
 
       <div className="flex flex-wrap gap-6 ">
         {list.map((product) => (
-          <div key={product.id} className="card w-80 bg-white shadow-md p-4 rounded-xl">
-            <img src={product.image} className="w-full h-60 object-cover rounded-lg" />
+          <div
+            key={product.id}
+            className="card w-80 flex flex-col gap-3 bg-white shadow-md p-4 rounded-xl hover:scale-105 duration-300"
+          >
+            <img
+              src={product.image}
+              className="w-full h-60 object-cover rounded-lg"
+            />
 
             <h2 className="mt-3 font-semibold text-lg">{product.name}</h2>
             <p className="text-gray-600">₹{product.price}</p>
@@ -34,6 +40,9 @@ const MyList = () => {
               className="mt-3 bg-red-500 text-white hover:bg-red-600 w-full rounded-xl p-2"
             >
               Remove
+            </button>
+            <button className="w-full bg-gray-300 p-2 font-semibold rounded-xl hover:bg-gray-400 duration-100">
+              Buy Now
             </button>
           </div>
         ))}

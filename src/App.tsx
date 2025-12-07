@@ -5,6 +5,8 @@ import './App.css'
 import Shop from './Pages/Shop';
 import Home from './Pages/Home';
 import MyList from './Pages/MyList';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,6 +23,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/mylist' element={<MyList/>}/>
         <Route path='/shop' element={<Shop/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </Router>
   )
